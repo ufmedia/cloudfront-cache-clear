@@ -4,14 +4,12 @@ This WordPress plugin automatically invalidates a CloudFront cache whenever a me
 
 ## Prerequisites
 
-- [AWS SDK for PHP](https://aws.amazon.com/sdk-for-php/)
 - An AWS CloudFront Distribution
 - The AWS CloudFront Distribution ID stored in the AWS Systems Manager Parameter Store under the key "CloudFrontDistrubutionID"
 - An AWS IAM role with permissions to read from the Systems Manager Parameter Store and to invalidate CloudFront caches
 
 ## Installation
 
-1. Ensure you have the AWS SDK for PHP installed and available to your WordPress installation.
 2. Download or clone this repository.
 3. Upload the plugin files to your `/wp-content/plugins/` directory, or install the plugin through the WordPress plugins screen directly.
 4. Activate the plugin through the 'Plugins' screen in WordPress.
