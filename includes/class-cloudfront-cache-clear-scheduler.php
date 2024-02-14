@@ -4,7 +4,7 @@
  *
  * This class is responsible for scheduling cache clear.
  *
- * @link       https://affinity-digital.com
+ * @link       https://ufmedia.co.uk
  * @since      1.0.0
  *
  * @package    Cloudfront_Cache_Clear
@@ -19,7 +19,7 @@
  * @since      1.0.0
  * @package    Cloudfront_Cache_Clear
  * @subpackage Cloudfront_Cache_Clear/includes
- * @author     John Thompson <john.thompson@affinity-digital.com>
+ * @author     John Thompson <john@ufmedia.co.uk>
  */
 class Cloudfront_Cache_Clear_Scheduler {
 
