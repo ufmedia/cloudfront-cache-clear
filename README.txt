@@ -1,4 +1,4 @@
-=== CloudFront Cache Invalidator ===
+=== CloudFront Cache Clear ===
 Contributors: ufmedia
 Tags: cache, cloudfront, aws
 Requires at least: 6.2.2
@@ -60,7 +60,7 @@ Once activated and configured, the plugin will automatically clear the CloudFron
 
 ## Support
 
-This is a basic plugin provided as-is. For support, please open an issue on the [GitHub repository](https://github.com/ufmedia/cloudfront-cache-invalidator).
+This is a basic plugin provided as-is. For support, please open an issue on the [GitHub repository](https://github.com/ufmedia/cloudfront-cache-clear).
 
 ## License
 

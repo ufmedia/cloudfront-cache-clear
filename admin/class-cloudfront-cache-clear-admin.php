@@ -45,34 +45,34 @@ class Cloudfront_Cache_Clear_Admin {
 		?>
 		
 		<div class="wrap">
-			<h1><?php _e( 'CloudFront Cache Clear', 'cloudfront-cache-clear' ); ?></h1>
+			<h1><?php esc_html_e( 'CloudFront Cache Clear', 'cloudfront-cache-clear' ); ?></h1>
 			<div id="dashboard-widgets" class="metabox-holder">
 				<div id="postbox-container-1" class="postbox-container" style="width:50%;">
 					<div id="normal-sortables" class="meta-box-sortables ui-sortable">
 						<div id="metabox" class="postbox">
 							<div class="inside">
 								<div class="main">
-									<p><strong><?php _e( 'This WordPress plugin automatically invalidates a CloudFront cache whenever one of the following conditions are met:', 'cloudfront-cache-clear' ); ?></strong></p>
+									<p><strong><?php esc_html_e( 'This WordPress plugin automatically invalidates a CloudFront cache whenever one of the following conditions are met:', 'cloudfront-cache-clear' ); ?></strong></p>
 									<ul>
-										<li><?php _e( '- An attachment is deleted - Scheduled.', 'cloudfront-cache-clear' ); ?></li>
-										<li><?php _e( '- An attachment is updated - Scheduled.', 'cloudfront-cache-clear' ); ?></li>
-										<li><?php _e( '- Attachment metadata is updated - Scheduled.', 'cloudfront-cache-clear' ); ?></li>
-										<li><?php _e( '- W3 Total Cache is cleared - Instant.', 'cloudfront-cache-clear' ); ?></li>
-										<li><?php _e( '- WP Super Cache is cleared - Instant.', 'cloudfront-cache-clear' ); ?></li>
+										<li><?php esc_html_e( '- An attachment is deleted - Scheduled.', 'cloudfront-cache-clear' ); ?></li>
+										<li><?php esc_html_e( '- An attachment is updated - Scheduled.', 'cloudfront-cache-clear' ); ?></li>
+										<li><?php esc_html_e( '- Attachment metadata is updated - Scheduled.', 'cloudfront-cache-clear' ); ?></li>
+										<li><?php esc_html_e( '- W3 Total Cache is cleared - Instant.', 'cloudfront-cache-clear' ); ?></li>
+										<li><?php esc_html_e( '- WP Super Cache is cleared - Instant.', 'cloudfront-cache-clear' ); ?></li>
 									</ul>
-									<p><strong><?php _e( 'In the case of scheduled invalidations, the plugin will wait 2 minutes before invalidating the cache. This is to prevent multiple invalidations when bulk updating attachments.', 'cloudfront-cache-clear' ); ?></strong></p>
-									<h2><?php _e( 'Prerequisites', 'cloudfront-cache-clear' ); ?></h2>
-									<p><?php _e( 'Ensure your IAM user has the following permissions:', 'cloudfront-cache-clear' ); ?></p>
+									<p><strong><?php esc_html_e( 'In the case of scheduled invalidations, the plugin will wait 2 minutes before invalidating the cache. This is to prevent multiple invalidations when bulk updating attachments.', 'cloudfront-cache-clear' ); ?></strong></p>
+									<h2><?php esc_html_e( 'Prerequisites', 'cloudfront-cache-clear' ); ?></h2>
+									<p><?php esc_html_e( 'Ensure your IAM user has the following permissions:', 'cloudfront-cache-clear' ); ?></p>
 									<ul>
 										<li><strong>cloudfront:CreateInvalidation</strong></li>
 									</ul>
-									<h2><?php _e( 'Configuration', 'cloudfront-cache-clear' ); ?></h2>
-									<p><?php _e( 'You can enter your CloudFront Distribution ID and Region below or you can define these in your wp-config.php file like so:', 'cloudfront-cache-clear' ); ?></p>
+									<h2><?php esc_html_e( 'Configuration', 'cloudfront-cache-clear' ); ?></h2>
+									<p><?php esc_html_e( 'You can enter your CloudFront Distribution ID and Region below or you can define these in your wp-config.php file like so:', 'cloudfront-cache-clear' ); ?></p>
 									<code>
 										define('CFCC_DISTRIBUTION_ID', 'XXXXXXXXXXXXXX');<br>
 										define('CFCC_REGION', 'eu-west-1');
 									</code>
-									<p><?php _e( 'Settings entered here will override the wp-config.php settings.', 'cloudfront-cache-clear' ); ?></p>
+									<p><?php esc_html_e( 'Settings entered here will override the wp-config.php settings.', 'cloudfront-cache-clear' ); ?></p>
 									<form method="post" action="options.php">
 										<?php
 										settings_fields( 'cloudfront_options_group' );
@@ -80,20 +80,20 @@ class Cloudfront_Cache_Clear_Admin {
 										submit_button();
 										?>
 									</form>
-									<h2><?php _e( 'Active Settings', 'cloudfront-cache-clear' ); ?></h2>
-									<p><?php _e( 'The following settings are currently active and will be used whenever clearing the cache:', 'cloudfront-cache-clear' ); ?></p>
+									<h2><?php esc_html_e( 'Active Settings', 'cloudfront-cache-clear' ); ?></h2>
+									<p><?php esc_html_e( 'The following settings are currently active and will be used whenever clearing the cache:', 'cloudfront-cache-clear' ); ?></p>
 									<ul>
-										<li><strong><?php _e( 'CloudFront Distribution ID:', 'cloudfront-cache-clear' ); ?></strong> <?php echo esc_html( $cloud_front->return_cloudfront_distribution_id() ) ?: 'N/A'; ?></li>
-										<li><strong><?php _e( 'CloudFront Region:', 'cloudfront-cache-clear' ); ?></strong> <?php echo esc_html( $cloud_front->return_aws_region() ) ?: 'N/A'; ?></li>
-										<li><strong><?php _e( 'Is AWS Environment:', 'cloudfront-cache-clear' ); ?></strong> <?php echo $cloud_front->return_is_aws_environment() ? __( 'True', 'cloudfront-cache-clear' ) : __( 'False', 'cloudfront-cache-clear' ); ?></li>
+										<li><strong><?php esc_html_e( 'CloudFront Distribution ID:', 'cloudfront-cache-clear' ); ?></strong> <?php echo esc_html( $cloud_front->return_cloudfront_distribution_id() ) ?: 'N/A'; ?></li>
+										<li><strong><?php esc_html_e( 'CloudFront Region:', 'cloudfront-cache-clear' ); ?></strong> <?php echo esc_html( $cloud_front->return_aws_region() ) ?: 'N/A'; ?></li>
+										<li><strong><?php esc_html_e( 'Is AWS Environment:', 'cloudfront-cache-clear' ); ?></strong> <?php echo $cloud_front->return_is_aws_environment() ? esc_html__( 'True', 'cloudfront-cache-clear' ) : esc_html__( 'False', 'cloudfront-cache-clear' ); ?></li>
 									</ul>
-									<h2><?php _e( 'Manually Clear Cache', 'cloudfront-cache-clear' ); ?></h2>
-									<p><?php _e( 'You can manually create an invalidation by clicking the button below. This will clear the entire cache for the distribution ID entered above.', 'cloudfront-cache-clear' ); ?></p>
+									<h2><?php esc_html_e( 'Manually Clear Cache', 'cloudfront-cache-clear' ); ?></h2>
+									<p><?php esc_html_e( 'You can manually create an invalidation by clicking the button below. This will clear the entire cache for the distribution ID entered above.', 'cloudfront-cache-clear' ); ?></p>
 									<form action="" method="post">
 										<?php
 										wp_nonce_field( 'cf_clear_cache_action', 'cf_clear_cache_nonce' );
 										?>
-										<input type="submit" name="cf_clear_cache" value="<?php _e( 'Clear CloudFront Cache', 'cloudfront-cache-clear' ); ?>" class="button button-secondary"/>
+										<input type="submit" name="cf_clear_cache" value="<?php esc_html_e( 'Clear CloudFront Cache', 'cloudfront-cache-clear' ); ?>" class="button button-secondary"/>
 									</form>
 								</div>
 							</div>
@@ -186,7 +186,7 @@ class Cloudfront_Cache_Clear_Admin {
 	 */
 	public function cf_show_admin_notice(): void {
 		if ( get_transient( 'cf_cache_cleared_notice' ) ) {
-			echo '<div class="notice notice-success is-dismissible"><p>' . __( 'CloudFront Invalidation Created', 'cloudfront-cache-clear' ) . '</p></div>';
+			echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__( 'CloudFront Invalidation Created', 'cloudfront-cache-clear' ) . '</p></div>';
 			delete_transient( 'cf_cache_cleared_notice' ); // Clear the transient.
 		}
 	}

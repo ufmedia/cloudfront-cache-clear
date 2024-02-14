@@ -1,4 +1,4 @@
-# CloudFront Cache Invalidator Plugin for WordPress
+# CloudFront Cache Clear for WordPress
 
 This WordPress plugin automatically invalidates a CloudFront cache whenever a media item is deleted, ensuring that your CloudFront-served assets are always up-to-date.
 
@@ -12,7 +12,7 @@ The plugin is also compatible with WP Super Cache and W3 Total Cache and will cr
 
 ## Installation
 
-2. Download or clone this repository.
+2. Download a copy of the [latest release](https://github.com/ufmedia/cloudfront-cache-clear/releases/latest)
 3. Upload the plugin files to your `/wp-content/plugins/` directory, or install the plugin through the WordPress plugins screen directly.
 4. Activate the plugin.
 
@@ -49,7 +49,7 @@ Once activated and configured, the plugin will automatically clear the CloudFron
 
 ## Support
 
-This is a basic plugin provided as-is. For support, please open an issue on the [GitHub repository](https://github.com/ufmedia/cloudfront-cache-invalidator).
+This is a basic plugin provided as-is. For support, please open an issue on the [GitHub repository](https://github.com/ufmedia/cloudfront-cache-clear).
 
 ## License
 
