@@ -36,8 +36,8 @@ if ( ! defined( 'WPINC' ) ) {
  */
 define( 'CLOUDFRONT_CACHE_CLEAR_VERSION', '1.0.0' );
 
-require_once plugin_dir_path( __FILE__ ) . 'includes/vendor/woocommerce/action-scheduler/action-scheduler.php';
-require_once plugin_dir_path( __FILE__ ) . 'includes/vendor/autoload.php';
+require_once plugin_dir_path( __FILE__ ) . 'vendor/woocommerce/action-scheduler/action-scheduler.php';
+require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
 /**
  * The code that runs during plugin activation.
