@@ -15,7 +15,7 @@
  * Plugin Name:       CloudFront Cache Clear
  * Plugin URI:        https://ufmedia.co.uk
  * Description:       This WordPress plugin automatically invalidates a CloudFront cache whenever a media item is deleted, ensuring that your CloudFront-served assets are always up-to-date.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            John Thompson
  * Author URI:        https://ufmedia.co.uk
  * License:           GPL-2.0+
@@ -34,7 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'CLOUDFRONT_CACHE_CLEAR_VERSION', '1.0.0' );
+define( 'CLOUDFRONT_CACHE_CLEAR_VERSION', '1.0.1' );
 
 require_once plugin_dir_path( __FILE__ ) . 'includes/vendor/woocommerce/action-scheduler/action-scheduler.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/vendor/autoload.php';
