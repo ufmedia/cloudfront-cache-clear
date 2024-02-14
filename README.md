@@ -12,7 +12,7 @@ The plugin is also compatible with WP Super Cache and W3 Total Cache and will cr
 
 ## Installation
 
-2. Download or clone this repository.
+2. Download a copy of the [latest release](https://github.com/ufmedia/cloudfront-cache-clear/releases/)
 3. Upload the plugin files to your `/wp-content/plugins/` directory, or install the plugin through the WordPress plugins screen directly.
 4. Activate the plugin.
 
