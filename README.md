@@ -5,8 +5,8 @@ This WordPress plugin automatically invalidates a CloudFront cache whenever a me
 ## Prerequisites
 
 - An AWS CloudFront Distribution
-- The AWS CloudFront Distribution ID stored in the AWS Systems Manager Parameter Store under the key "CloudFrontDistrubutionID"
-- An AWS IAM role with permissions to read from the Systems Manager Parameter Store and to invalidate CloudFront caches
+- The AWS CloudFront Distribution ID.
+- An AWS IAM role with permission to invalidate CloudFront caches
 
 ## Installation
 
@@ -16,18 +16,38 @@ This WordPress plugin automatically invalidates a CloudFront cache whenever a me
 
 ## Configuration
 
-1. Store your CloudFront distribution ID in the AWS Systems Manager Parameter Store under the key "CloudFrontDistrubutionID".
-2. Ensure your environment's IAM role has permissions to read from the AWS Systems Manager Parameter Store and to invalidate CloudFront caches.
-3. The plugin will automatically detect the AWS region. If the WordPress installation is outside AWS, it defaults to 'us-west-2'.
+1. Store your CloudFront distribution ID and Region to the wp-config.php file or directly within the plugin admin interface:
+
+```
+define( 'CFCC_DISTRIBUTION_ID', 'XXXXXXXXXXXXXX' );
+define( 'CFCC_REGION', 'eu-west-1' );
+```
+
+2. Ensure your environment's IAM role has permission to invalidate CloudFront caches:
+
+```
+cloudfront:CreateInvalidation
+```
+
 
 ## Usage
 
-Once activated and properly configured, the plugin will automatically clear the CloudFront cache for the specified distribution whenever a media item is deleted in WordPress.
+Once activated and configured, the plugin will automatically clear the CloudFront cache for the specified distribution whenever one of the following takes place:
+
+
+ - An attachment is deleted - Scheduled.
+ - An attachment is updated - Scheduled.
+ - Attachment metadata is updated - Scheduled.
+ - W3 Total Cache is cleared - Instant.
+ - WP Super Cache is cleared - Instant.
+
+ In the case of sheduled invalidations, the plugin will wait 2 minutes before invalidating the cache. This is to prevent multiple invalidations when bulk updating attachments.
+
 
 ## Support
 
-This is a basic plugin provided as-is. For support, please open an issue on the GitHub repository (if applicable) or contact the original developer.
+At present this plugin comes without any support.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.

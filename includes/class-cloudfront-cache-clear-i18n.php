@@ -1,12 +1,11 @@
 <?php
-
 /**
  * Define the internationalization functionality
  *
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       https://ufmedia.co.uk
+ * @link       https://affinity-digital.com
  * @since      1.0.0
  *
  * @package    Cloudfront_Cache_Clear
@@ -22,7 +21,7 @@
  * @since      1.0.0
  * @package    Cloudfront_Cache_Clear
  * @subpackage Cloudfront_Cache_Clear/includes
- * @author     John Thompson <john@ufmedia.co.uk>
+ * @author     John Thompson <john.thompson@affinity-digital.com>
  */
 class Cloudfront_Cache_Clear_i18n {
 
@@ -39,9 +38,5 @@ class Cloudfront_Cache_Clear_i18n {
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
-
 	}
-
-
-
 }

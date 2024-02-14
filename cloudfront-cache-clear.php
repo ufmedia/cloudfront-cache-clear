@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The plugin bootstrap file
  *
@@ -8,17 +7,17 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://ufmedia.co.uk
+ * @link              https://affinity-digital.com
  * @since             1.0.0
  * @package           Cloudfront_Cache_Clear
  *
  * @wordpress-plugin
  * Plugin Name:       CloudFront Cache Clear
- * Plugin URI:        https://ufmedia.co.uk
+ * Plugin URI:        https://affinity-digital.com
  * Description:       This WordPress plugin automatically invalidates a CloudFront cache whenever a media item is deleted, ensuring that your CloudFront-served assets are always up-to-date.
  * Version:           1.0.0
  * Author:            John Thompson
- * Author URI:        https://ufmedia.co.uk
+ * Author URI:        https://affinity-digital.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       cloudfront-cache-clear
@@ -36,6 +35,9 @@ if ( ! defined( 'WPINC' ) ) {
  * Rename this for your plugin and update it as you release new versions.
  */
 define( 'CLOUDFRONT_CACHE_CLEAR_VERSION', '1.0.0' );
+
+require_once plugin_dir_path( __FILE__ ) . 'includes/vendor/woocommerce/action-scheduler/action-scheduler.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/vendor/autoload.php';
 
 /**
  * The code that runs during plugin activation.

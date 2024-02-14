@@ -1,9 +1,8 @@
 <?php
-
 /**
  * Fired during plugin deactivation
  *
- * @link       https://ufmedia.co.uk
+ * @link       https://affinity-digital.com
  * @since      1.0.0
  *
  * @package    Cloudfront_Cache_Clear
@@ -18,7 +17,7 @@
  * @since      1.0.0
  * @package    Cloudfront_Cache_Clear
  * @subpackage Cloudfront_Cache_Clear/includes
- * @author     John Thompson <john@ufmedia.co.uk>
+ * @author     John Thompson <john.thompson@affinity-digital.com>
  */
 class Cloudfront_Cache_Clear_Deactivator {
 
@@ -30,7 +29,5 @@ class Cloudfront_Cache_Clear_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-
 	}
-
 }
