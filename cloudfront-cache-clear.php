@@ -33,7 +33,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'CLOUDFRONT_CACHE_CLEAR_VERSION', '1.0.1' );
+define( 'CLOUDFRONT_CACHE_CLEAR_VERSION', '1.1.3' );
 
 require_once plugin_dir_path( __FILE__ ) . 'vendor/woocommerce/action-scheduler/action-scheduler.php';
 require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
