@@ -61,6 +61,18 @@ class Cloudfront_Cache_Clear_Aws {
 	private $provider;
 
 	/**
+	 * Construct
+	 *
+	 * Set the AWS environment status, region and distribution ID.
+	 */
+	public function __construct() {
+		$this->is_aws_environment = $this->is_aws_environment();
+		$this->aws_region         = $this->get_aws_region();
+		$this->distribution_id    = $this->get_distribution_id();
+		$this->provider           = CredentialProvider::defaultProvider();
+	}
+
+	/**
 	 * Test if the environment is AWS.
 	 *
 	 * @return int
@@ -156,11 +168,6 @@ class Cloudfront_Cache_Clear_Aws {
 	 * @return mixed
 	 */
 	public function clear_cloudfront_cache() {
-
-		$this->is_aws_environment = $this->is_aws_environment();
-		$this->aws_region         = $this->get_aws_region();
-		$this->distribution_id    = $this->get_distribution_id();
-		$this->provider           = CredentialProvider::defaultProvider();
 		
 		$response = array();
 		// Check we have the required information.
